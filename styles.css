@@ -341,3 +341,85 @@ body {
 .vertical-center-cell {
     vertical-align: middle !important;
 }
+
+/* ==========================================
+   📱 MOBILE RESPONSIVE MEDIA QUERY
+   ========================================== */
+@media (max-width: 768px) {
+    
+    /* 1. Stack the Header Items Vertically */
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .institution-details h1 { font-size: 18px; }
+    .institution-details h2 { font-size: 14px; }
+    .portfolio-title-box { text-align: center; width: 100%; }
+
+    /* 2. Make Navigation Scrollable Horizontally */
+    .portfolio-nav {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch; /* Smooth swipe on iPhones */
+        padding: 10px;
+        gap: 5px;
+    }
+    
+    .nav-btn {
+        padding: 8px 14px;
+        font-size: 13px;
+        flex: 0 0 auto; /* Prevents buttons from squishing together */
+    }
+
+    /* 3. Reduce Container Padding */
+    .portfolio-container {
+        padding: 12px;
+    }
+
+    /* 4. Stack Profile Photo and Info Vertically */
+    .profile-layout {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .photo-placeholder-wrapper {
+        margin: 0 auto;
+    }
+
+    /* 5. Convert 2-Column Grid into a 1-Column List */
+    .grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+
+    /* 6. Force Large Tables to Swipe Side-to-Side */
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+    }
+    
+    /* Give table cells breathing room on small viewports */
+    .guideline-table th, 
+    .guideline-table td {
+        padding: 8px 10px !important;
+        font-size: 12px !important;
+    }
+
+    /* Prevent matrix headers and reflection boxes from collapsing */
+    .outcome-header-cell {
+        min-width: 140px;
+    }
+    
+    .prompt-cell {
+        min-width: 280px;
+    }
+}
