@@ -358,22 +358,27 @@ body {
     .institution-details h2 { font-size: 14px; }
     .portfolio-title-box { text-align: center; width: 100%; }
 
-    /* 2. Alternative Solution: Stack Navigation Buttons Vertically */
+    /* 2. Arrange Navigation into a 2x2 Grid Layout */
     .portfolio-nav {
-        display: flex !important;
-        flex-direction: column !important; /* Stack vertically */
-        gap: 6px !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* Two equal columns */
+        gap: 8px !important;
         padding: 10px !important;
-        overflow-x: visible !important;
-        white-space: normal !important;
+        overflow-x: visible !important; /* Disable horizontal scrolling */
+        white-space: normal !important; /* Allow long text to wrap to new lines */
     }
     
     .nav-btn {
+        padding: 10px 8px !important;
+        font-size: 12px !important;
         width: 100% !important;
-        padding: 12px 14px !important;
-        font-size: 13px !important;
-        text-align: left !important; /* Align text left like a clean menu app */
-        display: block !important;
+        flex: none !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 48px; /* Standard finger tap height */
+        line-height: 1.3 !important;
         border-radius: 6px !important;
     }
 
